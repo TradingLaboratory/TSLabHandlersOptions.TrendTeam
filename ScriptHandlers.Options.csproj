@@ -9,19 +9,13 @@
 	<Authors>TSLab</Authors>
 	<AssemblyName>TSLab.Script.Handlers.Options</AssemblyName>
 	<RootNamespace>TSLab.Script.Handlers.Options</RootNamespace>
-	<AssemblyVersion>2.2.999.0</AssemblyVersion>
+	<AssemblyVersion>3.0.0.0</AssemblyVersion>
 	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-	<Platforms>AnyCPU;ARM64</Platforms>
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsAsErrors />
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-	  <WarningsAsErrors />
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -43,8 +37,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ScriptCommonHandlers\ScriptCommonHandlers.csproj" />
-		<ProjectReference Include="..\ScriptCommon\ScriptCommon.csproj" />
+	  <PackageReference Include="TSLab.Script.Handlers" Version="3.0.0" />
 	</ItemGroup>
 
 </Project>
