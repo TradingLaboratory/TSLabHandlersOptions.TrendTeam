@@ -9,8 +9,10 @@
 	<Authors>TSLab</Authors>
 	<AssemblyName>TSLab.Script.Handlers.Options</AssemblyName>
 	<RootNamespace>TSLab.Script.Handlers.Options</RootNamespace>
+    <Version>3.0.0.0</Version>
 	<AssemblyVersion>3.0.0.0</AssemblyVersion>
 	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	<Description>TSLab handlers for options trading</Description>
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,20 +22,6 @@
 
 	<ItemGroup>
 		<Folder Include="Properties\" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Compile Remove="Options\IvChartTrading.cs" />
-		<Compile Remove="Options\MarketMaker.cs" />
-		<Compile Remove="Options\SubtractVolatilities.cs" />
-		<Compile Remove="Options\TestSecurityDescription.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="Options\IvChartTrading.cs" />
-		<None Include="Options\MarketMaker.cs" />
-		<None Include="Options\SubtractVolatilities.cs" />
-		<None Include="Options\TestSecurityDescription.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
