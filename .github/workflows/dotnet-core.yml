@@ -1,0 +1,29 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 9.x
+    - name: Restore packages
+      run: dotnet restore
+    - name: Pack
+      run: dotnet pack --configuration Release
+    - name: Publish
+      id: publish_nuget
+      uses: alirezanet/publish-nuget@v3.1.0
+      with:
+        PROJECT_FILE_PATH: ScriptHandlers.Options.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
