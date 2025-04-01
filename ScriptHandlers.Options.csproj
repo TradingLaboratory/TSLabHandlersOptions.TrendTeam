@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+	<Company>TSLab</Company>
+	<Product>TSLab</Product>
+	<Authors>TSLab</Authors>
+	<AssemblyName>TSLab.Script.Handlers.Options</AssemblyName>
+	<RootNamespace>TSLab.Script.Handlers.Options</RootNamespace>
+	<AssemblyVersion>2.2.999.0</AssemblyVersion>
+	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	<Platforms>AnyCPU;ARM64</Platforms>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsAsErrors />
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	  <WarningsAsErrors />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Properties\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Options\IvChartTrading.cs" />
+		<Compile Remove="Options\MarketMaker.cs" />
+		<Compile Remove="Options\SubtractVolatilities.cs" />
+		<Compile Remove="Options\TestSecurityDescription.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Options\IvChartTrading.cs" />
+		<None Include="Options\MarketMaker.cs" />
+		<None Include="Options\SubtractVolatilities.cs" />
+		<None Include="Options\TestSecurityDescription.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ScriptCommonHandlers\ScriptCommonHandlers.csproj" />
+		<ProjectReference Include="..\ScriptCommon\ScriptCommon.csproj" />
+	</ItemGroup>
+
+</Project>
